@@ -71,7 +71,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _Density: 0.5
-    - _DepthTransparency: 0.5
+    - _DepthTransparency: 1.19
     - _DetailNormalMapScale: 1
     - _DistanceFade: 0.5
     - _Distortion: 0.1
@@ -98,7 +98,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NormalStrength: 0.5
-    - _NormalTiling: 0.07
+    - _NormalTiling: 0.1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ProbeReflectionIntensity: 0
@@ -111,7 +111,7 @@ Material:
     - _ShoreTransparency: 0.5
     - _Specular: 0.3
     - _SrcBlend: 1
-    - _TransparencyFade: 1
+    - _TransparencyFade: 0.25
     - _UVSec: 0
     - _UnderwaterMode: 0
     - _UnderwaterTranspDist: 13.56
