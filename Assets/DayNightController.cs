@@ -4,29 +4,22 @@ using UnityEngine;
 
 public class DayNightController : MonoBehaviour
 {
-    public GameObject targetLight;
+    public Light targetLight;
     public GameObject targetMainCamera;
     public Material[] skys;
     public float dayTimer;
     public bool isCycle;
-
-    private void Awake()
-    {
-        targetLight = GameObject.FindGameObjectWithTag("Light");
-        targetMainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-    }
-
-
+    
     void Start()
     {
-        dayTimer = targetLight.GetComponent<Light>().intensity;
+        dayTimer = targetLight.intensity;
     }
  
     void Update()
     {
         if (!isCycle)
         {
-            targetLight.GetComponent<Light>().intensity = dayTimer -= Time.deltaTime * 0.3f;
+            targetLight.intensity = dayTimer -= Time.deltaTime * 0.3f;
             if(dayTimer <= 0)
             {
                 isCycle = true;
@@ -36,9 +29,9 @@ public class DayNightController : MonoBehaviour
             else if(isCycle)
 
         {
-            targetLight.GetComponent<Light>().intensity = dayTimer += Time.deltaTime * 0.3f;
+            targetLight.intensity = dayTimer += Time.deltaTime * 0.3f;
 
-            if (dayTimer <= 1)
+            if (dayTimer >= 1)
             {
                 isCycle = false;
             }
